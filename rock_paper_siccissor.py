@@ -1,18 +1,18 @@
 import random
 
 def rps(you):
-    game=["Taş","Kağıt","Makas"]
+    game=["Rock","Paper","Siccissor"]
     robot=random.choice(game)
-    print(f"Robotun seçimi:{robot}")
+    print(f"Robot's Choice:{robot}")
     if you==robot:
-        print("Berabere")
-    elif (you=="Taş" and robot=="Makas") or (you=="Kağıt" and robot=="Taş") or (you=="Makas" and robot=="Kağıt"):
-        print("Kazandın!!!")
+        print("DRAW")
+    elif (you=="Rock" and robot=="Siccissor") or (you=="Paper" and robot=="Rock") or (you=="Siccissor" and robot=="Paper"):
+        print("YOU WİN!!!")
     else:
-        print("Kaybettin!!!")
+        print("YOU LOSE!!!")
 
 
-print("Taş Kağıt Makas oyununa hoşgeldinizz")
-inn = input("Taş mı ,Kağıt mı ,Makas mı??: ").strip()
-print(f"Senin seçimin:{inn}")
+print("Welcome to Rock Paper Siccissor")
+inn = input("Rock,Paper,Siccissor??: ").strip()
+print(f"Your Choice:{inn}")
 rps(inn)
